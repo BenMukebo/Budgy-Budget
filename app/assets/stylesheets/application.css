@@ -3,8 +3,6 @@
   --box-border: 2px solid var(--shadow-color);
   --prmary-color: #f4f4f4;
   --bacground-color: #eee;
-
-  /* --text-color: #272727; */
   --main-color: #3778c2;
   --secondary-color: #5fb523;
   --text-color: #434b54;
@@ -63,14 +61,10 @@ h1 {
 
 .categories {
   padding: 0 1rem 1rem;
-
-  /* background-color: yellow; */
 }
 
 .category {
   justify-content: space-between;
-
-  /* height: 102px; */
   margin-bottom: 1rem;
   padding: 1rem;
   background-color: var(--bg-color);
@@ -128,7 +122,8 @@ button a {
   font-size: 1.3rem;
 }
 
-/* .word {
+/*
+.word {
 
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -179,6 +174,19 @@ section.container {
   background-color: #98bdff;
 }
 
+.recipe-btn {
+  width: 100%;
+  justify-content: center;
+}
+
+.add-recipe-btn button {
+  font-weight: 700;
+  border: var(--size-border);
+  border-radius: 4px;
+  padding: 0.4rem 1rem;
+}
+ */
+
 form {
   margin: 1.5rem auto;
   padding: 1rem;
@@ -190,8 +198,7 @@ form {
   font-weight: 700;
 }
 
-.input input,
-.input textarea {
+.input input {
   width: 100%;
   height: 1.8rem;
   margin: 0.5rem auto 1.5rem;
@@ -208,7 +215,6 @@ form {
   border: var(--size-border);
   border-radius: 8px;
   color: var(--on-secondary);
-  border: var(--box-border);
   background-color: #5fb523;
 }
 
@@ -222,4 +228,4 @@ form {
   border: var(--size-border);
   border-radius: 4px;
   padding: 0.2rem 1rem;
-} */
+}
