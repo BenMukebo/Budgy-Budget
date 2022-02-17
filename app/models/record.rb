@@ -2,6 +2,6 @@ class Record < ApplicationRecord
   belongs_to :user
   # has_many :category_records, dependent: :delete_all
   # has_many :categories, through: :category_records
-  validates :name, presence: true
-  validates_numericality_of :amount, greater_than: 0.0
+  has_many :categories
+ 
 end
