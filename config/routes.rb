@@ -1,8 +1,16 @@
 Rails.application.routes.draw do
+  resources :categories
   devise_for :users
-
   devise_scope :user do
-    root 'users#index'
+    authenticated :user do
+      root 'categories#index', as: :authenticated_root
+    end
+    unauthenticated do
+      root 'splash#index', as: :unauthenticated_root
+    end
+    get '/users/sign_out' => 'devise/sessions#destroy'
   resources :users, only: [:index]
   end
 end
+
+

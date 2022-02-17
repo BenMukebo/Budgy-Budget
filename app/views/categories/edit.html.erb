@@ -1,0 +1,15 @@
+<nav class="header-categories">
+  <h1>Editing category</h1>
+</nav>
+<%= render "form", category: @category %>
+
+<br>
+
+<div>
+  <div class="back-btn">
+    <%= link_to "Show category", @category %>
+  </div>
+  <% link_to "Back to categories", categories_path %>
+</div>
+<br>
+ 
