@@ -43,6 +43,25 @@ main {
   border: 1px solid rgba(134, 134, 134, 0.507);
 }
 
+h1 {
+  line-height: 70px;
+  text-align: center;
+  font-size: 24px;
+  color: var(--on-secondary);
+}
+
+button a {
+  color: var(--on-secondary);
+  font-size: 1.3rem;
+}
+
+form {
+  margin: 1.5rem auto;
+  padding: 1rem;
+  background-color: var(--bg-color);
+  border-radius: 4px;
+}
+
 /* SPLASH PAGE */
 
 .splash-page {
@@ -60,6 +79,7 @@ main {
   color: var(--secondary-color);
   border: var(--box-border);
   border-radius: 8px;
+
   /* background-color: var(--shadow-color); */
   font-weight: 900;
 }
@@ -74,9 +94,8 @@ main {
   margin: 0 auto;
 }
 
-.buttons form button {
+.buttons button {
   width: 100%;
-  background-color: var(--main-color);
   margin: 0 auto;
   background-color: #5fb523;
   padding: 0.5rem;
@@ -88,10 +107,11 @@ main {
 }
 
 /* LOG IN and SIGN UP */
-nav.nav-splash h1{
+nav.nav-splash h1 {
   background-color: var(--shadow-color);
   color: var(--main-color);
 }
+
 .actions {
   width: 100%;
   margin: 1rem 0;
@@ -119,13 +139,6 @@ nav.nav-splash h1{
   width: 100%;
   background-color: var(--main-color);
   margin-bottom: 1rem;
-}
-
-h1 {
-  line-height: 70px;
-  text-align: center;
-  font-size: 24px;
-  color: var(--on-secondary);
 }
 
 .categories {
@@ -186,10 +199,7 @@ h1 {
   background-color: #5fb523;
 }
 
-button a {
-  color: var(--on-secondary);
-  font-size: 1.3rem;
-}
+
 
 /*
 .word {
@@ -255,13 +265,6 @@ section.container {
   padding: 0.4rem 1rem;
 }
  */
-
-form {
-  margin: 1.5rem auto;
-  padding: 1rem;
-  background-color: var(--bg-color);
-  border-radius: 4px;
-}
 
 .input label {
   font-weight: 700;
