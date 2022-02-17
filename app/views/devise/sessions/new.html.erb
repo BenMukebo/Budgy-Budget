@@ -1,9 +1,13 @@
+<nav class="nav-splash">
+  <h1> LOG IN <h1>
+</nav>
+
 <%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
-  <div class="field">
+  <div class="input field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box" %>
   </div>
 
-  <div class="field">
+  <div class="input field">
     <%= f.password_field :password, autocomplete: "current-password", placeholder: "Password", class: "text-box" %>
   </div>
 
@@ -17,7 +21,8 @@
   <div class="actions">
     <%= f.submit "Log in", class: "login-button" %>
   </div>
-  <%= render "devise/shared/links" %>
-
+  <div class="act d-flex flex-center">
+    <%= render "devise/shared/links" %>
+  </div>
 <% end %>
 
