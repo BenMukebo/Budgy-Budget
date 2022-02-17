@@ -3,6 +3,7 @@
   --box-border: 2px solid var(--shadow-color);
   --prmary-color: #f4f4f4;
   --bacground-color: #eee;
+
   /* --text-color: #272727; */
   --main-color: #3778c2;
   --secondary-color: #5fb523;
@@ -40,6 +41,7 @@ main {
   max-width: 480px;
   margin: 0 auto;
   border: var(--size-border);
+
   /* background-color: #5fb523; */
 }
 
@@ -61,12 +63,13 @@ h1 {
 
 .categories {
   padding: 0 1rem 1rem;
+
   /* background-color: yellow; */
 }
 
-.categories .category,
 .category {
   justify-content: space-between;
+
   /* height: 102px; */
   margin-bottom: 1rem;
   padding: 1rem;
@@ -81,7 +84,6 @@ h1 {
 
 .image img {
   width: 100%;
-  /* height: 70px; */
 }
 
 .name-date {
@@ -93,7 +95,7 @@ h1 {
 }
 
 .name-date h3.name {
-  font-size: ;
+  font-size: 1rem;
 }
 
 .name-date p.date {
@@ -126,9 +128,8 @@ button a {
   font-size: 1.3rem;
 }
 
-/* 
-.word {
- 
+/* .word {
+
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
@@ -178,19 +179,6 @@ section.container {
   background-color: #98bdff;
 }
 
-.recipe-btn {
-  width: 100%;
-  justify-content: center;
-}
-
-.add-recipe-btn button {
-  font-weight: 700;
-  border: var(--size-border);
-  border-radius: 4px;
-  padding: 0.4rem 1rem;
-}
- */
-
 form {
   margin: 1.5rem auto;
   padding: 1rem;
@@ -206,12 +194,6 @@ form {
 .input textarea {
   width: 100%;
   height: 1.8rem;
-  margin: 0.5rem auto 1.5rem;
-}
-
-.input textarea {
-  width: 90%;
-  padding-bottom: 8rem;
   margin: 0.5rem auto 1.5rem;
 }
 
@@ -240,5 +222,4 @@ form {
   border: var(--size-border);
   border-radius: 4px;
   padding: 0.2rem 1rem;
-}
-
+} */
