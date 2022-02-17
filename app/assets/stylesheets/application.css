@@ -79,8 +79,6 @@ form {
   color: var(--secondary-color);
   border: var(--box-border);
   border-radius: 8px;
-
-  /* background-color: var(--shadow-color); */
   font-weight: 900;
 }
 
@@ -130,7 +128,6 @@ nav.nav-splash h1 {
   border-radius: 4px;
   padding: 0.2rem 1rem;
 }
-
 
 /* CATEGORIES PAGE */
 
@@ -198,8 +195,6 @@ nav.nav-splash h1 {
   border: var(--box-border);
   background-color: #5fb523;
 }
-
-
 
 /*
 .word {
