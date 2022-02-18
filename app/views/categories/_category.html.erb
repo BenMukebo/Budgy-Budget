@@ -6,6 +6,6 @@
     <h3 class="name"><%= category.name %></h3>
     <p class="date d-flex"> <%= category.created_at.strftime('%d %b %Y') %></p>
   </div>
-  <p class="total-amount">Tolal: $ </p>
+  <p class="total-amount">$<%=category.total_amount%></p>
 
 </article>

@@ -28,7 +28,7 @@
   </p>
   <div class="total-payment d-flex flex-center">
     <p class="">TOTAL PAYMENT</p>
-    <p class="total-amount">Tolal: $ </p>
+    <p class="total-amount">Tolal: $<%=@category.total_amount%></p>
   </div>
   <br>
   <hr>
@@ -36,7 +36,7 @@
   <div class="action-btn">
     <%= link_to "Add new transaction", new_category_record_path(@category.id), class: ""%>
   </div>
-
+  <br>
   <div class="d-flex flex-center">
     <div class="back-btn">
       <%= link_to "Edit category", edit_category_path(@category) %>
