@@ -2,6 +2,13 @@
 
 <% render @category %>
 
+<div class="back-btn">
+  <% link_to "Back", categories_path %>
+</div>
+<nav class="header-categories">
+  <h1>CATEGORY RECORDS</h1>
+</nav>
+
 <article class="category">
   <div class="d-flex">
     <div class="image">
@@ -23,9 +30,15 @@
     <p class="">TOTAL PAYMENT</p>
     <p class="total-amount">Tolal: $ </p>
   </div>
+  <br>
+  <hr>
+  <br>
+  <div class="action-btn">
+    <%= link_to "Add new transaction", new_category_record_path(@category.id), class: ""%>
+  </div>
 
   <div class="d-flex flex-center">
-    <div class="action-btn">
+    <div class="back-btn">
       <%= link_to "Edit category", edit_category_path(@category) %>
     </div>
     <div class="action-btn">
@@ -33,27 +46,21 @@
     </div>
   </div>
 
-  <div class="d-flex flex-center">
-    <div class="action-btn">
-      <%= link_to "Add new transaction", new_category_record_path(@category.id), class: ""%>
-    </div>
-    <div class="back-btn">
-      <%= link_to "Back", categories_path %>
-    </div>
-  <ul>
+  <div class="transactions d-flex"> 
+    <h2>List of transaction </h2>
+    <ul class="categoies-records">
+      <% @category.records.each do |record| %>
+        <li id="category-record">
+          <%= render 'records/record',  record: record %>
+        </li>
+      <%end%>
+    </ul>
+  </div>
 
-    <% @category.records.each do |record| %>
-      <li id="categories">
-      
-        <h2> hello wordl </h2>
-        <%= render category %>
-  
-      </li>
-  <%end%>
-  </ul>
-
-  <h2> <%= @category.records.map{|record| record} %> </h2>
+  <h2> <% @category.records.map{|record| record} %> </h2>
 
 
 </article>
+
+
 

@@ -20,14 +20,16 @@ class RecordsController < ApplicationController
   def edit
   end
 
-  # POST /records or /records.json
   def create
     @category = Category.find(params[:category_id])
-    @record = @category.records.new(record_params)
+    @record = Record.new(record_params)
     @record.user_id = current_user.id
+    @record.save!
+    category_record = @category.category_records.new(record: @record)
+    # OR category_record = CategoryRecord.create!(category: @category, record: @record)
 
     respond_to do |format|
-      if @record.save
+      if category_record.save
         # format.html { redirect_to record_url(@record), notice: "Record was successfully created." }
         # format.html { redirect_to category_url(@category), notice: "Record was successfully created." }
         format.html { redirect_to category_records_path(@category), notice: 'Record was successfully created.' }

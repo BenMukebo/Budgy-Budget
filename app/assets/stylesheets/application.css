@@ -135,11 +135,11 @@ nav.nav-splash h1 {
   height: 70px;
   width: 100%;
   background-color: var(--main-color);
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
 }
 
 .categories {
-  padding: 0 1rem 1rem;
+  padding: 1rem 1rem 0;
 }
 
 .category {
@@ -152,7 +152,7 @@ nav.nav-splash h1 {
 .image {
   width: 70px;
   height: 90%;
-  background-color: aquamarine;
+  background-color: var(--shadow-color);
 }
 
 .image img {
@@ -168,16 +168,17 @@ nav.nav-splash h1 {
 }
 
 .name-date h3.name {
-  font-size: 1rem;
+  font-size: 1.2rem;
 }
 
 .name-date p.date {
   height: 67%;
   align-items: flex-end;
+  margin-top: 1rem;
 }
 
 .total-amount {
-  margin-top: 1rem;
+  margin: 1rem 3rem 0.5rem 0;
   font-weight: 600;
   font-size: 1.1rem;
 }
@@ -195,6 +196,40 @@ nav.nav-splash h1 {
   border: var(--box-border);
   background-color: #5fb523;
 }
+
+.transactions {
+  flex-direction: column;
+  padding: 0 1rem;
+  align-items: center;
+  background-color: #3778c205;
+}
+
+.transactions h2 {
+  text-align: center;
+}
+
+.transactions ul {
+  width: 90%;
+  margin: 0 auto;
+}
+
+.transactions ul li {
+  width: 100%;
+  margin-top: 1rem;
+  padding: 1rem 3rem;
+  border-radius: 4px;
+  background-color: var(--bacground-color)
+}
+
+.transactions li p {
+  margin: 3px 0;
+  font-size: 1.1rem;
+}
+
+.transactions p span {
+  color: var(--main-color)
+}
+
 
 /*
 .word {
