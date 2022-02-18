@@ -32,9 +32,17 @@
       <%= button_to "Destroy category", @category, method: :delete %>
     </div>
   </div>
-  
-  <div class="back-btn">
-    <%= link_to "Back", categories_path %>
-  </div>
+
+  <div class="d-flex flex-center">
+    <div class="action-btn">
+      <%= link_to "Add new transaction", new_category_record_path(@category.id), class: ""%>
+    </div>
+    <div class="back-btn">
+      <%= link_to "Back", categories_path %>
+    </div>
+
+
+
+
 </article>
 

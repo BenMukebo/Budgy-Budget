@@ -1,9 +1,15 @@
-<h1>New record</h1>
+<div class="header-categories">
+  <h1>NEW TRANSACTION</h1>
+</div >
 
-<%= render "form", record: @record %>
+
+<%= render "form", record: @record, category: @category %>
 
 <br>
 
-<div>
-  <%= link_to "Back to records", records_path %>
+<div class="back-btn">
+  <% link_to "Back to records", category_records_path(@category, @record) %>
+  <%= link_to "Back to category", category_path(@category) %>
 </div>
+
+<br>

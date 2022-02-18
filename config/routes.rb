@@ -14,6 +14,7 @@ Rails.application.routes.draw do
   resources :users, only: [:index]
   end
   resources :categories do 
-    resources :records, except: [:index]
+    # resources :records, except: [:index]
+    resources :records
   end
 end
