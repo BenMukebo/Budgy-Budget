@@ -43,13 +43,6 @@ main {
   border: 1px solid rgba(134, 134, 134, 0.507);
 }
 
-h1 {
-  line-height: 70px;
-  text-align: center;
-  font-size: 24px;
-  color: var(--on-secondary);
-}
-
 button a {
   color: var(--on-secondary);
   font-size: 1.3rem;
@@ -131,11 +124,38 @@ nav.nav-splash h1 {
 
 /* CATEGORIES PAGE */
 
+
+.home-header-categories h1 {
+  width: 100%;
+  line-height: 70px;
+  text-align: center;
+  font-size: 24px;
+  background-color: var(--main-color);
+  color: var(--on-secondary);
+}
+
 .header-categories {
   height: 70px;
   width: 100%;
   background-color: var(--main-color);
-  /* margin-bottom: 1rem; */
+}
+
+.header-categories h1 {
+  width: 70%;
+  font-size: 24px;
+  color: var(--on-secondary);
+}
+
+.icons {
+  width: 10%;
+}
+
+.icons i {
+  margin-left: 50%;
+  padding: 0.3rem 0.5rem;
+  text-align: right;
+  color: var(--on-secondary);
+  font-size: 1.2rem;
 }
 
 .categories {
@@ -209,7 +229,7 @@ nav.nav-splash h1 {
 }
 
 .transactions ul {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
 }
 

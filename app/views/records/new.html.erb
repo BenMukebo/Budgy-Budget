@@ -1,15 +1,19 @@
-<div class="header-categories">
+<nav class="header-categories d-flex flex-center">
+  <div class="icons">
+    <%= link_to  category_path(@category) do %>
+      <i class="fa-solid fa-right-to-bracket"></i>
+    <% end %>
+  </div>
   <h1>NEW TRANSACTION</h1>
-</div>
+</nav>
+
 
 
 <%= render "form", record: @record, category: @category %>
 
 <br>
 
-<div class="back-btn">
+<div class="">
   <% link_to "Back to records", category_records_path(@category, @record) %>
-  <%= link_to "Back to category", category_path(@category) %>
+  <% link_to "Back to category", category_path(@category) %>
 </div>
-
-<br>

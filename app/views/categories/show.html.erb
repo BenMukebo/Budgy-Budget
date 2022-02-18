@@ -2,10 +2,12 @@
 
 <% render @category %>
 
-<div class="back-btn">
-  <% link_to "Back", categories_path %>
-</div>
-<nav class="header-categories">
+<nav class="header-categories d-flex flex-center">
+  <div class="icons">
+    <%= link_to  categories_path do %>
+      <i class="fa-solid fa-right-to-bracket"></i>
+    <% end %>
+  </div>
   <h1>CATEGORY RECORDS</h1>
 </nav>
 
