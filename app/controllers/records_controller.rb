@@ -1,14 +1,12 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[show edit update destroy]
 
-  # GET /records or /records.json
   def index
-    # @records = Record.all
-    @category = Category.find(params[:category_id])
-    @records = @category.records
+    @records = Record.all
+    # @category = Category.find(params[:category_id])
+    # @records = @category.records
   end
 
-  # GET /records/1 or /records/1.json
   def show
   end
 
@@ -25,9 +23,8 @@ class RecordsController < ApplicationController
   # POST /records or /records.json
   def create
     @category = Category.find(params[:category_id])
-    @record = Record.new(record_params)
+    @record = @category.records.new(record_params)
     @record.user_id = current_user.id
-    @record.save!
 
     respond_to do |format|
       if @record.save

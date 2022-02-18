@@ -1,4 +1,4 @@
-class CategoryRecordsController < ApplicationController
+lass CategoryRecordsController < ApplicationController
   before_action :set_category_record, only: %i[ show edit update destroy ]
 
   # GET /category_records or /category_records.json

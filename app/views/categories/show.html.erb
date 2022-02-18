@@ -40,8 +40,19 @@
     <div class="back-btn">
       <%= link_to "Back", categories_path %>
     </div>
+  <ul>
 
+    <% @category.records.each do |record| %>
+      <li id="categories">
+      
+        <h2> hello wordl </h2>
+        <%= render category %>
+  
+      </li>
+  <%end%>
+  </ul>
 
+  <h2> <%= @category.records.map{|record| record} %> </h2>
 
 
 </article>
