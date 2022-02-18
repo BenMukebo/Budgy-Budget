@@ -1,5 +1,8 @@
 Rails.application.routes.draw do
-  resources :categories
+  # resources :category_records
+  # resources :records
+  # resources :categories
+
   devise_for :users
   devise_scope :user do
     authenticated :user do
@@ -11,6 +14,8 @@ Rails.application.routes.draw do
     get '/users/sign_out' => 'devise/sessions#destroy'
   resources :users, only: [:index]
   end
+  resources :categories do 
+    # resources :records, except: [:index]
+    resources :records
+  end
 end
-
-

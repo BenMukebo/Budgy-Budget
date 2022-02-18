@@ -2,6 +2,15 @@
 
 <% render @category %>
 
+<nav class="header-categories d-flex flex-center">
+  <div class="icons">
+    <%= link_to  categories_path do %>
+      <i class="fa-solid fa-right-to-bracket"></i>
+    <% end %>
+  </div>
+  <h1>CATEGORY RECORDS</h1>
+</nav>
+
 <article class="category">
   <div class="d-flex">
     <div class="image">
@@ -21,20 +30,39 @@
   </p>
   <div class="total-payment d-flex flex-center">
     <p class="">TOTAL PAYMENT</p>
-    <p class="total-amount">Tolal: $ </p>
+    <p class="total-amount">Tolal: $<%=@category.total_amount%></p>
   </div>
-
+  <br>
+  <hr>
+  <br>
+  <div class="action-btn">
+    <%= link_to "Add new transaction", new_category_record_path(@category.id), class: ""%>
+  </div>
+  <br>
   <div class="d-flex flex-center">
-    <div class="action-btn">
+    <div class="back-btn">
       <%= link_to "Edit category", edit_category_path(@category) %>
     </div>
     <div class="action-btn">
       <%= button_to "Destroy category", @category, method: :delete %>
     </div>
   </div>
-  
-  <div class="back-btn">
-    <%= link_to "Back", categories_path %>
+
+  <div class="transactions d-flex"> 
+    <h2>List of transaction </h2>
+    <ul class="categoies-records">
+      <% @category.records.each do |record| %>
+        <li id="category-record">
+          <%= render 'records/record',  record: record %>
+        </li>
+      <%end%>
+    </ul>
   </div>
+
+  <h2> <% @category.records.map{|record| record} %> </h2>
+
+
 </article>
+
+
 
