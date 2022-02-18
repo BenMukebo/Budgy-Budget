@@ -3,7 +3,9 @@ class RecordsController < ApplicationController
 
   # GET /records or /records.json
   def index
-    @records = Record.all
+    # @records = Record.all
+    @category = Category.find(params[:category_id])
+    @records = @category.records
   end
 
   # GET /records/1 or /records/1.json

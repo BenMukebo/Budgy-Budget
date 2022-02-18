@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :category_records
   # resources :records
   # resources :categories
 
