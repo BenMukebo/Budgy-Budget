@@ -33,6 +33,13 @@
 - Limit access to webapp resources based on authorization rules.
 - Analyze in writing why you have made a coding choice using one structure over another.
 
+## Live Demo
+
+[Live Demo Link](https://limitless-savannah-05818.herokuapp.com/)
+
+## Loom Video
+
+[Loom Video Link](https://www.loom.com/share/2d1971886acf41eab27ea244c1f1acdb)
 
 ## Getting Started
 
