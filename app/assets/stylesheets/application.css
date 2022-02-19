@@ -122,7 +122,6 @@ form {
   color: var(--main-color);
 }
 
-
 .actions {
   width: 100%;
   margin: 1rem 0;
@@ -249,6 +248,7 @@ form {
 
 .transactions {
   flex-direction: column;
+
   /* padding: 0 1rem; */
   align-items: center;
 }
@@ -268,7 +268,6 @@ form {
   padding: 1rem 3rem;
   border-radius: 4px;
   background-color: #3778c205;
-
 }
 
 .transactions li p {

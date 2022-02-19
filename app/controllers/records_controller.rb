@@ -32,7 +32,7 @@ class RecordsController < ApplicationController
       if category_record.save
         # format.html { redirect_to record_url(@record), notice: "Record was successfully created." }
         # format.html { redirect_to new_category_record_path(@category), notice: 'Record was successfully created.' }
-        format.html { redirect_to category_url(@category), notice: "Record was successfully created." }
+        format.html { redirect_to category_url(@category), notice: 'Record was successfully created.' }
 
       else
         format.html { render :new, status: :unprocessable_entity }
