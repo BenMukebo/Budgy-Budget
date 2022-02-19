@@ -98,10 +98,30 @@ form {
 }
 
 /* LOG IN and SIGN UP */
-.nav-splash h1 {
+
+.nav-splash {
+  width: 100%;
   background-color: var(--shadow-color);
   color: var(--main-color);
+  padding: 0.5rem;
 }
+
+.icon {
+  width: 10%;
+}
+
+.icon i {
+  margin-left: 50%;
+  padding: 0.3rem 0.5rem;
+  text-align: right;
+  font-size: 1.2rem;
+  color: var(--main-color);
+}
+
+.nav-splash h1 {
+  color: var(--main-color);
+}
+
 
 .actions {
   width: 100%;
@@ -124,14 +144,14 @@ form {
 
 /* CATEGORIES PAGE */
 
-.home-header-categories h1 {
+/* .home-header-categories h1 {
   width: 100%;
   line-height: 70px;
   text-align: center;
   font-size: 24px;
   background-color: var(--main-color);
   color: var(--on-secondary);
-}
+} */
 
 .header-categories {
   height: 70px;

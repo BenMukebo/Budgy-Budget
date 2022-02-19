@@ -1,6 +1,9 @@
 <p style="color: green"><%= notice %></p>
 
-<div class="home-header-categories">
+<div class="header-categories d-flex flex-center">
+<%= link_to  destroy_user_session_path, class: "icons" do%>
+  <i class="fa-solid fa-toggle-on"></i>
+<% end %>
   <h1>CATEGORIES</h1>
 </div >
 <div class="categories">
