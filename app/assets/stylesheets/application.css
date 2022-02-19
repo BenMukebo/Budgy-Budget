@@ -26,6 +26,15 @@ body {
   background-color: var(--bacground-color);
 }
 
+.new-edit-cat {
+  cursor: pointer;
+  border: none;
+  background: inherit;
+  color: white;
+  font-size: 1.3rem;
+  margin-right: 10px;
+}
+
 .d-flex {
   display: flex;
 }
@@ -161,8 +170,13 @@ form {
   background-color: var(--main-color);
 }
 
-.header-categories h1 {
+.header-categories h1:not(.transaction-header-nav) {
   width: 70%;
+  font-size: 24px;
+  color: var(--on-secondary);
+}
+
+.transaction-header-nav {
   font-size: 24px;
   color: var(--on-secondary);
 }

@@ -21,11 +21,10 @@ RSpec.describe 'Categories Page Features', type: :feature do
   end
 
   describe 'I can see' do
-
     it 'the title of the page' do
       expect(page).to have_content 'CATEGORIES'
     end
-  
+
     it 'the name of the category' do
       expect(page).to have_content 'Safari'
     end

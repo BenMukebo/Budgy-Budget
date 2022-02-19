@@ -21,15 +21,14 @@ RSpec.describe 'Transaction Page Features', type: :feature do
   end
 
   describe 'I can see' do
-
     it 'the title of the page' do
       expect(page).to have_content 'CATEGORY DETAILS'
     end
-  
+
     it 'the title of the page' do
       expect(page).to have_content 'TOTAL PAYMENT'
     end
-  
+
     it 'the name of the category' do
       expect(page).to have_content 'Safari'
     end
