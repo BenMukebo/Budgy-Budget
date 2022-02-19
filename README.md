@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Rails-capstone-Budget-app
+# Budget-Budget-app
 
 
 ## Description
