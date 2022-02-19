@@ -31,34 +31,14 @@ class RecordsController < ApplicationController
     respond_to do |format|
       if category_record.save
         # format.html { redirect_to record_url(@record), notice: "Record was successfully created." }
-        # format.html { redirect_to category_url(@category), notice: "Record was successfully created." }
-        format.html { redirect_to new_category_record_path(@category), notice: 'Record was successfully created.' }
+        # format.html { redirect_to new_category_record_path(@category), notice: 'Record was successfully created.' }
+        format.html { redirect_to category_url(@category), notice: "Record was successfully created." }
 
       else
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
-
-  # def create
-  #   @record = Record.new(record_params)
-  #   @record.user_id = current_user.id
-  #   @record.save!
-  #   @full_tran = @record.categories_records.create!(category_id: params[:category_id])
-  #   @adding_to_cat = Category.find(@full_tran.category_id)
-  #   @adding_to_cat.total += @record.amount
-  #   respond_to do |format|
-  #     if @full_tran.save
-  #       format.html do
-  #         @adding_to_cat.save
-  #         redirect_to category_url(@full_tran.category_id),
-  #                     notice: 'record was successfully created.'
-  #       end
-  #     else
-  #       format.html { render :new, status: :unprocessable_entity }
-  #     end
-  #   end
-  # end
 
   # PATCH/PUT /records/1 or /records/1.json
   def update

@@ -10,4 +10,8 @@ class Category < ApplicationRecord
   def total_amount
     records.sum('amount')
   end
+
+  def recent_transactions
+    records.order(created_at: :desc)
+  end
 end
