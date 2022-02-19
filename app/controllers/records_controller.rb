@@ -5,8 +5,6 @@ class RecordsController < ApplicationController
 
   def index
     @records = Record.all
-    # @category = Category.find(params[:category_id])
-    # @records = @category.records
   end
 
   def show; end
@@ -30,8 +28,6 @@ class RecordsController < ApplicationController
 
     respond_to do |format|
       if category_record.save
-        # format.html { redirect_to record_url(@record), notice: "Record was successfully created." }
-        # format.html { redirect_to new_category_record_path(@category), notice: 'Record was successfully created.' }
         format.html { redirect_to category_url(@category), notice: 'Transaction was successfully created.' }
 
       else
@@ -69,7 +65,6 @@ class RecordsController < ApplicationController
 
   # Only allow a list of trusted parameters through.
   def record_params
-    # params.require(:record).permit(:name, :amount, :user_id)
     params.require(:record).permit(:name, :amount)
   end
 end

@@ -12,7 +12,6 @@ class CategoriesController < ApplicationController
   def show
     # @category = set_category
     @category = Category.find(params[:id])
-    puts "\n\n\n\n #{@category.records.size} \n\n\n\n"
     @records = @category.records.order(created_at: :desc)
   end
 
