@@ -1,5 +1,7 @@
 class RecordsController < ApplicationController
   before_action :set_record, only: %i[show edit update destroy]
+  before_action :authenticate_user!
+  load_and_authorize_resource :category
 
   def index
     @records = Record.all
