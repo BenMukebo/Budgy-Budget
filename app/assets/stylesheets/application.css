@@ -224,6 +224,7 @@ form {
   margin: 1rem 0 0.5rem 0;
   font-weight: 600;
   font-size: 1.1rem;
+  z-index: 1;
 }
 
 .btn-changes {
