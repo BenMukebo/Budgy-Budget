@@ -176,6 +176,14 @@ $  rails generate rspec:install
 $  rspec spec     # to test if your tests are passed
 ```
 
+#### Generate MVC with scaffold
+
+```bash
+  $  rails g scaffold category name user:belongs_to
+  $  rails g scaffold records name amount:decimal user:belongs_to 
+  $  rails g scaffold category_records user:belongs_to
+  $  rails g scaffold category_records category:belongs_to record:belongs_to
+```
 
 #### Generate controllers
 
