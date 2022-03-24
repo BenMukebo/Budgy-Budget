@@ -153,7 +153,6 @@ $  sudo service postgresql restart
  You can also execute the `rails routes` command in your terminal to produce the same output.
 
 
-
 #### Generate rspec
 
 - At the first you need to include those lines in your Gemfile
@@ -175,7 +174,6 @@ $  rails generate rspec:install
 ```bash
 $  rspec spec     # to test if your tests are passed
 ```
-
 
 #### Generate controllers
 
