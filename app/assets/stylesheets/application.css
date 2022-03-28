@@ -8,11 +8,10 @@
   --bacground-color: #eeeeee;
   --main-color: #763f03f7;
   /* --main-color: #a05d1f; */
-  /* --secondary-color: #5fb523; */
+  --btn-color: #5fb523;
   --secondary-color: #4da012;
   --text-color: #434b54;
   --bg-color: #f5f6f8;
-  --on-main: #fff;
   --on-secondary: #fff;
   --shadow-color: #f1f1f2;
 }
@@ -50,15 +49,23 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   max-width: 540px;
   width: 100%;
-  height: 100vh;
-  /* min-height: 95vh; */
+  min-height: 100vh;
+  height: 100%;
   margin: 0 auto;
   padding: 1rem;
   position: relative;
+  background-color: antiquewhite;
 
-  /* border: 1px solid rgba(134, 134, 134, 0.507); */
+  border: 1px solid rgba(134, 134, 134, 0.507);
+}
+
+button {
+  border: 0;
+  outline: none;
 }
 
 button a {
@@ -67,9 +74,14 @@ button a {
 }
 
 form {
-  margin: 0 auto;
+  width: 100%;
+  flex: 1;
+  flex-direction: column;
+  justify-content: center;
+  /* margin: 0 auto; */
   padding: 1rem;
   background-color: var(--bg-color);
+  background-color: #4da012;
   border-radius: 4px;
 }
 
@@ -95,14 +107,20 @@ form {
   font-weight: 900;
 }
 
-/* .splash-page .user-icon {
-  width: 80px;
-  height: 80px;
-} */
+.splash-page .user-icon {
+  /* margin: 0 auto;
+  text-align: center; */
+  flex-direction: column;
+}
 
 .user-icon i {
   color: var(--prmary-color);
   /* font-size: 200px; */
+}
+
+.user-icon h2 {
+  color: var(--prmary-color);
+  font-size: 2rem;
 }
 
 .buttons {
@@ -129,11 +147,18 @@ form {
 
 /* LOG IN and SIGN UP */
 
+.form-container {
+  flex-direction: column;
+  height: 100%;
+  background-color: var(--main-color);
+}
+
 .nav-splash {
   width: 100%;
-  background-color: var(--shadow-color);
+  /* background-color: var(--shadow-color); */
+  background-color: red;
   color: var(--main-color);
-  padding: 0.5rem;
+  padding: 1rem 0.5rem;
 }
 
 .icon {
@@ -148,7 +173,7 @@ form {
   color: var(--main-color);
 }
 
-.nav-splash h1 {
+.nav-splash h2 {
   color: var(--main-color);
 }
 
@@ -203,14 +228,25 @@ form {
 }
 
 .categories {
-  padding: 1rem 1rem 0;
+  padding: 1rem 0;
+  /* background-color: antiquewhite; */
+
 }
 
 .category {
+  flex: 1;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  position: relative;
   padding: 1rem;
+  margin-bottom: 1rem;
   background-color: var(--bg-color);
+    /* background-color: cornflowerblue; */
+}
+
+.category.transaction {
+  margin-bottom: 0;
+  /* max-height: 20%; */
+  /* background-color: red; */
 }
 
 .category-head {
@@ -226,6 +262,10 @@ form {
 
 .image img {
   width: 100%;
+}
+
+.line-bar {
+  margin: 0.6rem auto 1rem;
 }
 
 .name-date {
@@ -259,36 +299,54 @@ form {
   bottom: -1rem;
 }
 
+.back-btn a,
+.btn-changes button {
+  font-weight: 700;
+  border: var(--size-border);
+  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  color: var(--prmary-color);
+  background-color: var(--btn-color);
+}
+
+.btn-changes form {
+  padding: 0;
+  margin-left: 1rem;
+  background-color: inherit;
+}
+
+.btn-changes form button {
+  background-color: var(--main-color);
+}
+
 .new-cat-btn {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 1rem;
-  background-color: #5fb523;
+  background-color: var(--btn-color);
 }
 
 .new-cat-btn button {
   width: 100%;
   padding: 1rem;
   border: var(--box-border);
-  background-color: #5fb523;
+  background-color: var(--btn-color);
 }
 
 .transactions {
   flex-direction: column;
-
-  /* padding: 0 1rem; */
   align-items: center;
 }
 
 .transactions h2 {
+  margin-top: 1rem;
   text-align: center;
 }
 
 .transactions ul {
   width: 100%;
   margin: 0 auto 1rem;
+  /* background-color: yellow; */
 }
 
 .transactions ul li {
@@ -296,7 +354,7 @@ form {
   margin-top: 1rem;
   padding: 1rem 3rem;
   border-radius: 4px;
-  background-color: #3778c205;
+  background-color: #3778c215;
 }
 
 .transactions li p {
@@ -325,6 +383,8 @@ form {
 
 .action-btn {
   width: 100%;
+  padding: 1rem;
+  /* background-color: violet; */
 }
 
 .submit input,
@@ -333,12 +393,12 @@ form {
   border: var(--size-border);
   border-radius: 8px;
   color: var(--on-secondary);
-  background-color: #5fb523;
+  background-color: var(--btn-color);
 }
 
 .back-btn {
-  width: 100%;
-  justify-content: center;
+  /* width: 100%; */
+  /* justify-content: center; */
 }
 
 .back-btn a {
@@ -346,4 +406,6 @@ form {
   border: var(--size-border);
   border-radius: 4px;
   padding: 0.2rem 1rem;
+  color: var(--prmary-color);
+  background-color: var(--btn-color);
 }
