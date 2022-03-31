@@ -156,7 +156,6 @@ $  rails db:reset #to clean the database
  You can also execute the `rails routes` command in your terminal to produce the same output.
 
 
-
 #### Generate rspec
 
 - At the first you need to include those lines in your Gemfile
