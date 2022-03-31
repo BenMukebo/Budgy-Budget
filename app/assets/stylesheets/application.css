@@ -58,7 +58,8 @@ main {
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
-  padding: 1rem;
+
+  /* padding: 1rem; */
   position: relative;
   background-color: antiquewhite;
   border: 1px solid rgba(134, 134, 134, 0.507);
@@ -79,7 +80,8 @@ button a {
 form {
   flex: 1;
   flex-direction: column;
-  justify-content: center;
+
+  /* justify-content: center; */
   padding: 2rem 1rem;
   background-color: var(--bg-color);
   border-radius: 0 0 4px  4px;
@@ -89,8 +91,8 @@ form {
 
 .splash-page {
   width: 100%;
-  height: calc(100vh - 2.2rem);
-  max-height: 80%;
+  height: calc(100vh);
+  max-height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -109,8 +111,6 @@ form {
 }
 
 .splash-page .user-icon {
-  /* margin: 0 auto;
-  text-align: center; */
   flex-direction: column;
 }
 
@@ -120,7 +120,7 @@ form {
 
 .user-icon h2 {
   color: var(--prmary-color);
-  font-size: 2rem;
+  font-size: 1.9rem;
 }
 
 .buttons {
@@ -164,12 +164,11 @@ form {
   border-radius: 4px  4px 0 0;
 }
 
-.icons {
-  width: 10%;
+.icons a {
+  /* width: 10%; */
 }
 
 .icons i {
-  margin-left: 50%;
   padding: 0.3rem 0.5rem;
   text-align: right;
   font-size: 1.2rem;
@@ -204,13 +203,21 @@ form {
 .header-categories {
   height: 70px;
   width: 100%;
+  justify-content: space-around;
   background-color: var(--main-color);
 }
 
 .header-categories h1:not(.transaction-header-nav) {
-  width: 70%;
+  width: 80%;
+  text-align: center;
   font-size: 24px;
   color: var(--on-secondary);
+}
+
+.header-categories h1.transaction-header-nav {
+  text-align: center;
+  width: 60%;
+  font-size: 22px;
 }
 
 .transaction-header-nav {
@@ -220,8 +227,6 @@ form {
 
 .categories {
   padding: 1rem 0;
-
-  /* background-color: antiquewhite; */
 }
 
 .category {
@@ -231,8 +236,6 @@ form {
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--bg-color);
-
-  /* background-color: cornflowerblue; */
 }
 
 .category.transaction {
@@ -304,6 +307,11 @@ form {
   bottom: -1rem;
 }
 
+.btns-record {
+  width: 80%;
+  margin: 0 auto;
+}
+
 .btn-changes form,
 .btns-record form {
   padding: 0;
@@ -341,31 +349,46 @@ form {
 .transactions {
   flex-direction: column;
   align-items: center;
+
+  /* background-color: var(--bacground-color); */
+}
+
+.transactions.show {
+  max-width: 100%;
+  height: calc(100vh - 72px);
+  background-color: var(--bg-color);
 }
 
 .transactions h2 {
-  margin-top: 1rem;
+  margin-top: 1.1rem;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .transactions ul {
   width: 100%;
   margin: 0 auto 1rem;
-
-  /* background-color: yellow; */
 }
 
 .transactions ul li {
   width: 100%;
   margin-top: 1rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
   border-radius: 4px;
   background-color: #3778c215;
+}
+
+.transactions li.show .record.show {
+  padding: 1rem 5%;
 }
 
 .transactions li p {
   margin: 3px 0;
   font-size: 1.1rem;
+}
+
+.transactions li.show .record.show p {
+  font-size: 1.3rem;
 }
 
 .transactions p span {
