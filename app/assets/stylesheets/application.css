@@ -79,9 +79,7 @@ form {
   flex: 1;
   flex-direction: column;
   justify-content: center;
-  /* margin: 0 auto; */
   padding: 2rem 1rem;
-  background-color: var(--bg-color);
   background-color: var(--bg-color);
   border-radius: 0 0 4px  4px;
 }
@@ -117,7 +115,6 @@ form {
 
 .user-icon i {
   color: var(--prmary-color);
-  /* font-size: 200px; */
 }
 
 .user-icon h2 {
@@ -149,22 +146,19 @@ form {
 
 /* LOG IN and SIGN UP */
 
-/* .form-container {
-  flex-direction: column;
+/* #new-tran-from,
+#save-categ-from {
   height: 100%;
-  background-color: var(--main-color);
+  min-height: 100%;
+  background-color: red;
+  margin: 0;
+  padding: 0;
 } */
-
-/* .login-form */
 
 input:hover:not(.input-file) {
   transform: scale(1.01);
   border: 1px solid var(--main-color);
 }
-
-/* input.choose {
-  border: none;
-} */
 
 .nav-splash {
   width: 100%;
@@ -174,11 +168,11 @@ input:hover:not(.input-file) {
   border-radius: 4px  4px 0 0;
 }
 
-.icon {
+.icons {
   width: 10%;
 }
 
-.icon i {
+.icons i {
   margin-left: 50%;
   padding: 0.3rem 0.5rem;
   text-align: right;
@@ -226,18 +220,6 @@ input:hover:not(.input-file) {
 .transaction-header-nav {
   font-size: 24px;
   color: var(--on-secondary);
-}
-
-.icons {
-  width: 10%;
-}
-
-.icons i {
-  margin-left: 50%;
-  padding: 0.3rem 0.5rem;
-  text-align: right;
-  color: var(--on-secondary);
-  font-size: 1.2rem;
 }
 
 .categories {
@@ -327,8 +309,8 @@ input:hover:not(.input-file) {
   padding: 0.2rem 1rem;
   color: var(--prmary-color);
   background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
 }
-
 
 .btn-changes form button,
 .btns-record form button {
@@ -336,9 +318,26 @@ input:hover:not(.input-file) {
   background-color: var(--main-color);
 }
 
+.actions-btn:hover,
+.action-btn:hover,
+.btn-changes form button:hover,
+.btns-record button:hover {
+  transform: scale(1.03);
+}
+
 .actions-save input {
+  border: none !important;
+  padding: 3px 5px;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--on-secondary);
+  transition: all 0.5s ease-in;
+}
+
+.actions-save input:hover,
+.icons i:hover {
+  transform: scale(1.07);
+  color: antiquewhite;
 }
 
 .new-cat-btn {
@@ -408,7 +407,6 @@ input:hover:not(.input-file) {
 .action-btn {
   width: 100%;
   padding: 1rem;
-  /* background-color: violet; */
 }
 
 .submit input,
@@ -419,5 +417,5 @@ input:hover:not(.input-file) {
   border-radius: 8px;
   color: var(--on-secondary);
   background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
 }
-
