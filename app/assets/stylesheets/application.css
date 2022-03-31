@@ -4,6 +4,7 @@
 :root {
   --size-border: 2px solid var(--text-color);
   --box-border: 2px solid var(--shadow-color);
+  --box-hover: 1px solid var(--main-color);
   --prmary-color: #f4f4f4;
   --bacground-color: #eeeeee;
   --main-color: #763f03f7;
@@ -59,13 +60,14 @@ main {
   padding: 1rem;
   position: relative;
   background-color: antiquewhite;
-
   border: 1px solid rgba(134, 134, 134, 0.507);
 }
 
-button, input {
+button,
+input {
   border: 0;
   outline: none;
+  transition: all 0.5s ease-in;
 }
 
 button a {
@@ -74,15 +76,14 @@ button a {
 }
 
 form {
-  /* width: 100%; */
   flex: 1;
   flex-direction: column;
   justify-content: center;
   /* margin: 0 auto; */
   padding: 2rem 1rem;
   background-color: var(--bg-color);
-  background-color: #ccc;
-  border-radius: 4px;
+  background-color: var(--bg-color);
+  border-radius: 0 0 4px  4px;
 }
 
 /* SPLASH PAGE */
@@ -154,12 +155,23 @@ form {
   background-color: var(--main-color);
 } */
 
+/* .login-form */
+
+input:hover:not(.input-file) {
+  transform: scale(1.01);
+  border: 1px solid var(--main-color);
+}
+
+/* input.choose {
+  border: none;
+} */
+
 .nav-splash {
   width: 100%;
-  /* background-color: var(--shadow-color); */
-  background-color: red;
-  color: var(--main-color);
+  background-color: var(--main-color);
+  color: var(--prmary-color);
   padding: 1rem 0.5rem;
+  border-radius: 4px  4px 0 0;
 }
 
 .icon {
@@ -171,11 +183,11 @@ form {
   padding: 0.3rem 0.5rem;
   text-align: right;
   font-size: 1.2rem;
-  color: var(--main-color);
+  color: var(--prmary-color);
 }
 
 .nav-splash h2 {
-  color: var(--main-color);
+  color: inherit;
 }
 
 .actions {
@@ -231,7 +243,6 @@ form {
 .categories {
   padding: 1rem 0;
   /* background-color: antiquewhite; */
-
 }
 
 .category {
@@ -300,17 +311,6 @@ form {
   bottom: -1rem;
 }
 
-.back-btn a,
-.btn-changes button,
-.btns-record button {
-  font-weight: 700;
-  border: var(--size-border);
-  border-radius: 4px;
-  padding: 0.2rem 1rem;
-  color: var(--prmary-color);
-  background-color: var(--btn-color);
-}
-
 .btn-changes form,
 .btns-record form {
   padding: 0;
@@ -318,9 +318,27 @@ form {
   background-color: inherit;
 }
 
+.actions-btn a,
+.btn-changes form button,
+.btns-record button {
+  font-weight: 600;
+  border: var(--shadow-color);
+  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  color: var(--prmary-color);
+  background-color: var(--btn-color);
+}
+
+
 .btn-changes form button,
 .btns-record form button {
+  border: var(--size-border);
   background-color: var(--main-color);
+}
+
+.actions-save input {
+  font-weight: 600;
+  color: var(--on-secondary);
 }
 
 .new-cat-btn {
@@ -396,22 +414,10 @@ form {
 .submit input,
 .action-btn a {
   padding: 0.5rem 1rem;
+  font-weight: 700;
   border: var(--size-border);
   border-radius: 8px;
   color: var(--on-secondary);
   background-color: var(--btn-color);
 }
 
-.back-btn {
-  /* width: 100%; */
-  /* justify-content: center; */
-}
-
-.back-btn a {
-  font-weight: 700;
-  border: var(--size-border);
-  border-radius: 4px;
-  padding: 0.2rem 1rem;
-  color: var(--prmary-color);
-  background-color: var(--btn-color);
-}
