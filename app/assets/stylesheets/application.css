@@ -6,8 +6,9 @@
   --box-border: 2px solid var(--shadow-color);
   --box-hover: 1px solid var(--main-color);
   --prmary-color: #f4f4f4;
-  --bacground-color: #eeeeee;
+  --bacground-color: #eee;
   --main-color: #763f03f7;
+
   /* --main-color: #a05d1f; */
   --btn-color: #5fb523;
   --secondary-color: #4da012;
@@ -155,11 +156,6 @@ form {
   padding: 0;
 } */
 
-input:hover:not(.input-file) {
-  transform: scale(1.01);
-  border: 1px solid var(--main-color);
-}
-
 .nav-splash {
   width: 100%;
   background-color: var(--main-color);
@@ -224,6 +220,7 @@ input:hover:not(.input-file) {
 
 .categories {
   padding: 1rem 0;
+
   /* background-color: antiquewhite; */
 }
 
@@ -234,13 +231,12 @@ input:hover:not(.input-file) {
   padding: 1rem;
   margin-bottom: 1rem;
   background-color: var(--bg-color);
-    /* background-color: cornflowerblue; */
+
+  /* background-color: cornflowerblue; */
 }
 
 .category.transaction {
   margin-bottom: 0;
-  /* max-height: 20%; */
-  /* background-color: red; */
 }
 
 .category-head {
@@ -287,6 +283,21 @@ input:hover:not(.input-file) {
   z-index: 1;
 }
 
+.new-cat-btn {
+  width: 100%;
+  margin-top: auto;
+  padding: 1rem;
+  background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
+}
+
+.new-cat-btn button {
+  width: 100%;
+  padding: 1rem;
+  border: var(--box-border);
+  background-color: var(--btn-color);
+}
+
 .btn-changes {
   position: absolute;
   right: 0;
@@ -301,8 +312,8 @@ input:hover:not(.input-file) {
 }
 
 .actions-btn a,
-.btn-changes form button,
-.btns-record button {
+.btns-record button,
+.btn-changes form button {
   font-weight: 600;
   border: var(--shadow-color);
   border-radius: 4px;
@@ -318,13 +329,6 @@ input:hover:not(.input-file) {
   background-color: var(--main-color);
 }
 
-.actions-btn:hover,
-.action-btn:hover,
-.btn-changes form button:hover,
-.btns-record button:hover {
-  transform: scale(1.03);
-}
-
 .actions-save input {
   border: none !important;
   padding: 3px 5px;
@@ -332,26 +336,6 @@ input:hover:not(.input-file) {
   font-weight: 600;
   color: var(--on-secondary);
   transition: all 0.5s ease-in;
-}
-
-.actions-save input:hover,
-.icons i:hover {
-  transform: scale(1.07);
-  color: antiquewhite;
-}
-
-.new-cat-btn {
-  width: 100%;
-  margin-top: auto;
-  padding: 1rem;
-  background-color: var(--btn-color);
-}
-
-.new-cat-btn button {
-  width: 100%;
-  padding: 1rem;
-  border: var(--box-border);
-  background-color: var(--btn-color);
 }
 
 .transactions {
@@ -367,6 +351,7 @@ input:hover:not(.input-file) {
 .transactions ul {
   width: 100%;
   margin: 0 auto 1rem;
+
   /* background-color: yellow; */
 }
 
@@ -418,4 +403,33 @@ input:hover:not(.input-file) {
   color: var(--on-secondary);
   background-color: var(--btn-color);
   transition: all 0.5s ease-in;
+}
+
+.new-cat-btn:hover {
+  transform: scale(0.97);
+}
+
+.new-cat-btn button:hover,
+.new-cat-btn button:hover a {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  background-color: var(--btn-color);
+}
+
+input:hover:not(.input-file) {
+  transform: scale(1.01);
+  border: 1px solid var(--main-color);
+}
+
+.actions-btn:hover,
+.action-btn:hover,
+.btns-record button:hover,
+.btn-changes form button:hover {
+  transform: scale(1.03);
+}
+
+.actions-save input:hover,
+.icons i:hover {
+  transform: scale(1.07);
+  color: antiquewhite;
 }
