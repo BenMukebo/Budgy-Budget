@@ -1,11 +1,11 @@
 <nav class="nav-splash d-flex flex-center">
-  <%= link_to unauthenticated_root_path, class: "icon" do%>
+  <%= link_to unauthenticated_root_path, class: "icons" do%>
     <i class="fa-solid fa-arrow-left back"></i>
   <% end %>
-  <h1> LOG IN <h1>
+  <h2> LOG IN <h2>
 </nav>
 
-<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form"}) do |f| %>
+<%= form_for(resource, as: resource_name, url: session_path(resource_name), data: { turbo: false }, html: { class: "login-form d-flex"}) do |f| %>
   <div class="input field">
     <%= f.email_field :email, autofocus: true, autocomplete: "email" ,placeholder: "Email", class: "text-box" %>
   </div>
@@ -27,5 +27,7 @@
   <div class="act d-flex flex-center">
     <% render "devise/shared/links" %>
   </div>
-<% end %>
+ <% end %>
+
+
 

@@ -1,4 +1,4 @@
-<%= form_with(model: category) do |form| %>
+<%= form_with(model: category, id: "save-categ-from") do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
       <h2><%= pluralize(category.errors.count, "error") %> prohibited this category from being Budgyd:</h2>
@@ -16,14 +16,14 @@
     <%= form.text_field :name, required: true, placeholder: "Name" %>
   </div>
   <strong>Upload an image...</strong>
-  <div class="input">
-    <%= form.label :image, style: "display: block" %>
+  <div class="input choose">
+    <%= form.label :image, style: "display: none" %>
     <%= form.file_field :image, required: true, class:"input-file"%>
   </div>
     
   <div class="d-flex">
     <div class="submit">
-      <%= form.submit 'Save' %>
+      <% form.submit 'Save' %>
     </div>
   </div>
 <% end %>

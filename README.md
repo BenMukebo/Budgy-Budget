@@ -1,6 +1,6 @@
 ![](https://img.shields.io/badge/Microverse-blueviolet)
 
-# Budget-Budget-app
+# Budgy-Budget
 
 
 ## Description
@@ -12,6 +12,19 @@
   - register and log in, so that the data is private to them.
   - introduce new transactions associated with a category.
   - see the money spent on each category.
+
+### Screenshot
+
+|       Home Page                 |          Category Page                |         Add Category Form                |
+:--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
+![](./app/assets/images/screenshot_1.png) |![](./app/assets/images/screenshot_2.png) |![](./app/assets/images/screenshot_3.png) |
+
+
+|         Category-Transaction    |        Add Transaction Form           |         Transaction Details                |
+:--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
+![](./app/assets/images/screenshot_4.png) |![](./app/assets/images/screenshot_5.png) |![](./app/assets/images/screenshot_6.png) |
+
+
 
 ## Learning objectives
 
@@ -35,7 +48,7 @@
 
 ## Live Demo
 
-[Live Demo Link](https://limitless-savannah-05818.herokuapp.com/)
+[Live Demo Link](https://budgy-budget-api.herokuapp.com)
 
 ## Loom Video
 
@@ -62,13 +75,13 @@ To get a local copy for this project and running follow these simple example ste
 $  sudo -u postgres createuser blog-app -s
 ```
 
-### Creating the Rails-capstone-Budget-app
+### Creating the Budgy-Budget application
 
-- use PostgreSQL database 
+- To create project with PostgreSQL database 
 
 ```bash
-$   rails new Rails-capstone-Budget-app --database=postgresql  #or
-$   rails new Rails-capstone-Budget-app -d postgresql
+$   rails new Rails-capstone-Budgy-Budget --database=postgresql  #or
+$   rails new Rails-capstone-Budgy-Budget -d postgresql
 
 $   cd Rails-capstone-Budget-app # Move into the application directory
 ```
@@ -77,8 +90,8 @@ $   cd Rails-capstone-Budget-app # Move into the application directory
 ### Clone this repository
 
 ```bash
-$ git clone https://github.com/BenMukebo/Blog-app.git
-$ cd Blog-app
+$ git clone https://github.com/BenMukebo/Budgy-Budget.git
+$ cd Budgy-Budget
 ```
 
 ### Create the database
@@ -86,17 +99,6 @@ $ cd Blog-app
 ```bash
 $   rails db:create   # or
 $   rake db:create
-```
-
-### Creating the hello-rails Application
-
-- use PostgreSQL database 
-
-```bash
-$   rails new blog-app --database=postgresql  #or
-$   rails new blog-app -d postgresql
-
-$   cd hello-rails # Move into the application directory
 ```
 
 ### Install linter and 
@@ -144,6 +146,7 @@ $   rails server -p3001
 
 ```bash
 $  sudo service postgresql restart 
+$  rails db:reset #to clean the database                                                                    
 ```
 
 #### Listing Existing Routes
@@ -175,34 +178,13 @@ $  rails generate rspec:install
 $  rspec spec     # to test if your tests are passed
 ```
 
-#### Generate controllers
+#### Generate MVC with scaffold
 
 ```bash
-  $  rails generate controller users index show
-  $  rails generate controller posts index show
-```
-
-#### Generate migration files
-
-```bash
-  $  rails generate migration CreateUsers
-  $  rails generate migration CreatePosts
-  $  rails generate migration CreateLikes
-  $  rails generate migration CreateComments
-  $  rails generate migration AddUserRefToComments
-  $  rails generate migration AddPostRefToComments
-  $  rails generate migration AddUserRefToLikes
-  $  rails generate migration AddPostRefToLikes
-  $  rails generate migration AddUserRefToPosts
-```
-
-#### Generate model
-
-```bash
-  $  rails generate model User name  photo bio:text posts_counter:integer  
-  $  rails generate model Post  title  text:text comments_counter:integer likes_counter:integer author:references
-  $  rails generate model Like author:references post:references 
-  $  rails generate model Comments text:text author:references post:references
+  $  rails g scaffold category name user:belongs_to
+  $  rails g scaffold records name amount:decimal user:belongs_to 
+  $  rails g scaffold category_records user:belongs_to
+  $  rails g scaffold category_records category:belongs_to record:belongs_to
 ```
 
 #### Generate Schema

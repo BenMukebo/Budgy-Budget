@@ -1,13 +1,19 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+
 :root {
   --size-border: 2px solid var(--text-color);
   --box-border: 2px solid var(--shadow-color);
+  --box-hover: 1px solid var(--main-color);
   --prmary-color: #f4f4f4;
   --bacground-color: #eee;
-  --main-color: #3778c2;
-  --secondary-color: #5fb523;
+  --main-color: #763f03f7;
+
+  /* --main-color: #a05d1f; */
+  --btn-color: #5fb523;
+  --secondary-color: #4da012;
   --text-color: #434b54;
   --bg-color: #f5f6f8;
-  --on-main: #fff;
   --on-secondary: #fff;
   --shadow-color: #f1f1f2;
 }
@@ -21,7 +27,7 @@
 }
 
 body {
-  height: 100vh;
+  height: 100%;
   width: 100%;
   background-color: var(--bacground-color);
 }
@@ -45,14 +51,25 @@ body {
 }
 
 main {
+  display: flex;
+  flex-direction: column;
   max-width: 540px;
-  width: 98%;
-  height: auto;
-  min-height: 95vh;
-  margin: 1rem auto;
-  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  height: 100%;
+  margin: 0 auto;
 
-  /* border: 1px solid rgba(134, 134, 134, 0.507); */
+  /* padding: 1rem; */
+  position: relative;
+  background-color: antiquewhite;
+  border: 1px solid rgba(134, 134, 134, 0.507);
+}
+
+button,
+input {
+  border: 0;
+  outline: none;
+  transition: all 0.5s ease-in;
 }
 
 button a {
@@ -61,17 +78,21 @@ button a {
 }
 
 form {
-  margin: 0 auto;
-  padding: 1rem;
+  flex: 1;
+  flex-direction: column;
+
+  /* justify-content: center; */
+  padding: 2rem 1rem;
   background-color: var(--bg-color);
-  border-radius: 4px;
+  border-radius: 0 0 4px  4px;
 }
 
 /* SPLASH PAGE */
 
 .splash-page {
   width: 100%;
-  height: 90vh;
+  height: calc(100vh);
+  max-height: 100%;
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
@@ -81,10 +102,25 @@ form {
 .splash-page h1 {
   font-size: 2rem;
   padding: 0.3rem 1rem;
+  margin: 0 10px;
+  text-align: center;
   color: var(--secondary-color);
   border: var(--box-border);
   border-radius: 8px;
   font-weight: 900;
+}
+
+.splash-page .user-icon {
+  flex-direction: column;
+}
+
+.user-icon i {
+  color: var(--prmary-color);
+}
+
+.user-icon h2 {
+  color: var(--prmary-color);
+  font-size: 1.9rem;
 }
 
 .buttons {
@@ -94,13 +130,13 @@ form {
 .buttons form {
   width: 100%;
   background-color: var(--main-color);
-  margin: 0 auto;
+  margin: 5px auto;
 }
 
 .buttons button {
   width: 100%;
   margin: 0 auto;
-  background-color: #5fb523;
+  background-color: var(--secondary-color);
   padding: 0.5rem;
   border: var(--bg-color);
   color: var(--on-secondary);
@@ -111,27 +147,36 @@ form {
 
 /* LOG IN and SIGN UP */
 
+/* #new-tran-from,
+#save-categ-from {
+  height: 100%;
+  min-height: 100%;
+  background-color: red;
+  margin: 0;
+  padding: 0;
+} */
+
 .nav-splash {
   width: 100%;
-  background-color: var(--shadow-color);
-  color: var(--main-color);
-  padding: 0.5rem;
+  background-color: var(--main-color);
+  color: var(--prmary-color);
+  padding: 1rem 0.5rem;
+  border-radius: 4px  4px 0 0;
 }
 
-.icon {
-  width: 10%;
+.icons a {
+  /* width: 10%; */
 }
 
-.icon i {
-  margin-left: 50%;
+.icons i {
   padding: 0.3rem 0.5rem;
   text-align: right;
   font-size: 1.2rem;
-  color: var(--main-color);
+  color: var(--prmary-color);
 }
 
-.nav-splash h1 {
-  color: var(--main-color);
+.nav-splash h2 {
+  color: inherit;
 }
 
 .actions {
@@ -158,13 +203,21 @@ form {
 .header-categories {
   height: 70px;
   width: 100%;
+  justify-content: space-around;
   background-color: var(--main-color);
 }
 
 .header-categories h1:not(.transaction-header-nav) {
-  width: 70%;
+  width: 80%;
+  text-align: center;
   font-size: 24px;
   color: var(--on-secondary);
+}
+
+.header-categories h1.transaction-header-nav {
+  text-align: center;
+  width: 60%;
+  font-size: 22px;
 }
 
 .transaction-header-nav {
@@ -172,27 +225,21 @@ form {
   color: var(--on-secondary);
 }
 
-.icons {
-  width: 10%;
-}
-
-.icons i {
-  margin-left: 50%;
-  padding: 0.3rem 0.5rem;
-  text-align: right;
-  color: var(--on-secondary);
-  font-size: 1.2rem;
-}
-
 .categories {
-  padding: 1rem 1rem 0;
+  padding: 1rem 0;
 }
 
 .category {
+  flex: 1;
   justify-content: space-between;
-  margin-bottom: 1rem;
+  position: relative;
   padding: 1rem;
+  margin-bottom: 1rem;
   background-color: var(--bg-color);
+}
+
+.category.transaction {
+  margin-bottom: 0;
 }
 
 .category-head {
@@ -208,6 +255,10 @@ form {
 
 .image img {
   width: 100%;
+}
+
+.line-bar {
+  margin: 0.6rem auto 1rem;
 }
 
 .name-date {
@@ -235,37 +286,83 @@ form {
   z-index: 1;
 }
 
-.btn-changes {
-  position: absolute;
-  right: 0;
-  bottom: -1rem;
-}
-
 .new-cat-btn {
-  position: absolute;
-  bottom: 0;
   width: 100%;
-  margin-top: 2rem;
+  margin-top: auto;
   padding: 1rem;
-  background-color: #5fb523;
+  background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
 }
 
 .new-cat-btn button {
   width: 100%;
   padding: 1rem;
   border: var(--box-border);
-  background-color: #5fb523;
+  background-color: var(--btn-color);
+}
+
+.btn-changes {
+  position: absolute;
+  right: 0;
+  bottom: -1rem;
+}
+
+.btns-record {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.btn-changes form,
+.btns-record form {
+  padding: 0;
+  margin-left: 1rem;
+  background-color: inherit;
+}
+
+.actions-btn a,
+.btns-record button,
+.btn-changes form button {
+  font-weight: 600;
+  border: var(--shadow-color);
+  border-radius: 4px;
+  padding: 0.2rem 1rem;
+  color: var(--prmary-color);
+  background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
+}
+
+.btn-changes form button,
+.btns-record form button {
+  border: var(--size-border);
+  background-color: var(--main-color);
+}
+
+.actions-save input {
+  border: none !important;
+  padding: 3px 5px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: var(--on-secondary);
+  transition: all 0.5s ease-in;
 }
 
 .transactions {
   flex-direction: column;
-
-  /* padding: 0 1rem; */
   align-items: center;
+
+  /* background-color: var(--bacground-color); */
+}
+
+.transactions.show {
+  max-width: 100%;
+  height: calc(100vh - 72px);
+  background-color: var(--bg-color);
 }
 
 .transactions h2 {
+  margin-top: 1.1rem;
   text-align: center;
+  font-size: 1.3rem;
 }
 
 .transactions ul {
@@ -276,14 +373,22 @@ form {
 .transactions ul li {
   width: 100%;
   margin-top: 1rem;
-  padding: 1rem 3rem;
+  padding: 1rem;
   border-radius: 4px;
-  background-color: #3778c205;
+  background-color: #3778c215;
+}
+
+.transactions li.show .record.show {
+  padding: 1rem 5%;
 }
 
 .transactions li p {
   margin: 3px 0;
   font-size: 1.1rem;
+}
+
+.transactions li.show .record.show p {
+  font-size: 1.3rem;
 }
 
 .transactions p span {
@@ -296,8 +401,10 @@ form {
 
 .input input {
   width: 100%;
-  height: 1.8rem;
+  height: 1.9rem;
+  padding: 0.7rem;
   margin: 0.5rem auto 1.5rem;
+  border-radius: 4px;
 }
 
 .submit {
@@ -307,25 +414,45 @@ form {
 
 .action-btn {
   width: 100%;
+  padding: 1rem;
 }
 
 .submit input,
 .action-btn a {
   padding: 0.5rem 1rem;
+  font-weight: 700;
   border: var(--size-border);
   border-radius: 8px;
   color: var(--on-secondary);
-  background-color: #5fb523;
+  background-color: var(--btn-color);
+  transition: all 0.5s ease-in;
 }
 
-.back-btn {
-  width: 100%;
-  justify-content: center;
+.new-cat-btn:hover {
+  transform: scale(0.97);
 }
 
-.back-btn a {
-  font-weight: 700;
-  border: var(--size-border);
-  border-radius: 4px;
-  padding: 0.2rem 1rem;
+.new-cat-btn button:hover,
+.new-cat-btn button:hover a {
+  color: var(--main-color);
+  border-color: var(--main-color);
+  background-color: var(--btn-color);
+}
+
+input:hover:not(.input-file) {
+  transform: scale(1.01);
+  border: 1px solid var(--main-color);
+}
+
+.actions-btn:hover,
+.action-btn:hover,
+.btns-record button:hover,
+.btn-changes form button:hover {
+  transform: scale(1.03);
+}
+
+.actions-save input:hover,
+.icons i:hover {
+  transform: scale(1.07);
+  color: antiquewhite;
 }
