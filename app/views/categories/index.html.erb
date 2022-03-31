@@ -8,9 +8,16 @@
 <p style="color: green"><%= notice %></p>
 
 <div class="categories">
+
+  <% if @categories == [] %>
+    <article class="category">
+      <p>No Category has been created yet !!!</p>
+    </article>
+  <% end %>
+
   <% @categories.each do |category| %>
     <%= link_to category do %>
-    <%= render category %>
+      <%= render category %>
     <%end%>
   <% end %>
 </div>
