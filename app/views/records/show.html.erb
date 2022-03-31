@@ -1,0 +1,10 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @record %>
+
+<div>
+  <%= link_to "Edit this record", edit_category_record_path(@category, @record) %> |
+  <%= link_to "Back to records", category_record_path(@category, @record) %>
+ 
+  <%=button_to 'Delete', {:controller => :records, :action => 'destroy', :id => @record.id}, :method => :delete%>
+</div>
