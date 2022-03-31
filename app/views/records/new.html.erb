@@ -5,7 +5,9 @@
     <% end %>
   </div>
   <h1 class="transaction-header-nav">NEW TRANSACTION</h1>
-  <input type="submit" name="commit" value="Save" class="login-button new-edit-cat" form="new-tran-from" data-disable-with="Log in">
+  <div class="actions-save">
+    <input type="submit" name="commit" value="save" class="login-button new-edit-cat" form="new-tran-from" data-disable-with="Log in">
+  </div>
 </nav>
 
 <%= render "form", record: @record, category: @category %>
