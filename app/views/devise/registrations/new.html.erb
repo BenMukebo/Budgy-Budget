@@ -10,15 +10,13 @@
     <div class="input field">
       <%= f.label :name %><br />
       <div>
-        <span style="font-size: 20px;"><i class="fa-light fa-user"></i></span>
-        <%= f.text_field :name, autofocus: true, class: "text-box" %>
+        <%= f.text_field :name, autofocus: true, placeholder: "name", class: "text-box" %>
       </div>
     </div>
 
     <div class="input field" >
       <%= f.label :email %><br />
-      <span style="font-size: 20px;"><i class="fa-light fa-envelope-circle-check"></i></span>
-      <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "text-box" %>
+      <%= f.email_field :email, autofocus: true, autocomplete: "email", placeholder: "email", class: "text-box" %>
     </div>
 
     <div class="input field">
@@ -26,14 +24,12 @@
       <% if @minimum_password_length %>
       <em>(<%= @minimum_password_length %> characters minimum)</em>
       <% end %><br />
-      <span style="font-size: 20px;"><i class="fa-light fa-lock"></i></span>
-      <%= f.password_field :password, autocomplete: "new-password", class: "text-box" %>
+      <%= f.password_field :password, autocomplete: "new-password", placeholder: "password", class: "text-box" %>
     </div>
 
     <div class="input field">
-      <span style="font-size: 20px;"><i class="fa-light fa-lock-keyhole"></i></span>
       <%= f.label :password_confirmation %><br />
-      <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "text-box" %>
+      <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "password_confirmation", class: "text-box" %>
     </div>
 
     <%= f.hidden_field :posts_counter, :value => 0 %>
