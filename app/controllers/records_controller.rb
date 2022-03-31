@@ -45,7 +45,7 @@ class RecordsController < ApplicationController
   def update
     respond_to do |format|
       if @record.update(record_params)
-        format.html { redirect_to record_url(@record), notice: 'Record was successfully updated.' }
+        format.html { redirect_to category_record_url(@category, @record), notice: 'Record was successfully updated.' }
       else
         format.html { render :edit, status: :unprocessable_entity }
       end

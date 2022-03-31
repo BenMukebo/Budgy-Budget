@@ -50,9 +50,11 @@
       <% end %>
 
       <% @category.recent_transactions.each do |record| %>
-        <li id="category-record">
-          <%= render 'records/record',  record: record %>
-        </li>
+        <%= link_to  category_record_path(@category, record) do %>
+          <li id="category-record">
+            <%= render 'records/record',  record: record %>
+          </li>
+        <%end%>
       <%end%>
     </ul>
 

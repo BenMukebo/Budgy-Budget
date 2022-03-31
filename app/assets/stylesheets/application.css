@@ -301,7 +301,8 @@ form {
 }
 
 .back-btn a,
-.btn-changes button {
+.btn-changes button,
+.btns-record button {
   font-weight: 700;
   border: var(--size-border);
   border-radius: 4px;
@@ -310,13 +311,15 @@ form {
   background-color: var(--btn-color);
 }
 
-.btn-changes form {
+.btn-changes form,
+.btns-record form {
   padding: 0;
   margin-left: 1rem;
   background-color: inherit;
 }
 
-.btn-changes form button {
+.btn-changes form button,
+.btns-record form button {
   background-color: var(--main-color);
 }
 
