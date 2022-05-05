@@ -4,16 +4,16 @@
 :root {
   --size-border: 2px solid var(--text-color);
   --box-border: 2px solid var(--shadow-color);
-  --box-hover: 1px solid var(--main-color);
-  --prmary-color: #f4f4f4;
-  --bacground-color: #eee;
-  --main-color: #763f03f7;
+  --box-hover: 1px solid var(--primary-color)
+  --bacground-color: #e5e5e5;
+  --primary-color:#298cfc33;
 
-  /* --main-color: #a05d1f; */
+  /* --primary-color: #a05d1f; */
   --btn-color: #5fb523;
-  --secondary-color: #4da012;
+  --secondary-color: #02428b;
+  ;
   --text-color: #434b54;
-  --bg-color: #f5f6f8;
+  --bg-color: #0372ef42;;
   --on-secondary: #fff;
   --shadow-color: #f1f1f2;
 }
@@ -61,7 +61,7 @@ main {
 
   /* padding: 1rem; */
   position: relative;
-  background-color: antiquewhite;
+  background-color: var(--bacground-color);
   border: 1px solid rgba(134, 134, 134, 0.507);
 }
 
@@ -80,12 +80,21 @@ button a {
 form {
   flex: 1;
   flex-direction: column;
-
-  /* justify-content: center; */
-  padding: 2rem 1rem;
-  background-color: var(--bg-color);
+  padding: 0.5rem 2rem;
   border-radius: 0 0 4px  4px;
 }
+
+form.login-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 90%;
+  padding: 3rem 2rem 2rem;
+  background-color: var(--primary-color);
+  border-radius: 16px;
+}
+
 
 /* SPLASH PAGE */
 
@@ -96,17 +105,19 @@ form {
   flex-direction: column;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
+  border-radius: 0px 100px 0px 0px;
 }
 
 .splash-page h1 {
   font-size: 2rem;
-  padding: 0.3rem 1rem;
-  margin: 0 10px;
+  padding: 1rem 1rem;
+  margin: 2.5rem 10px 0;
   text-align: center;
   color: var(--secondary-color);
-  border: var(--box-border);
-  border-radius: 8px;
+  background: #0372ef26;
+  /* border: var(--box-border); */
+  border-radius: 20px;
   font-weight: 900;
 }
 
@@ -115,32 +126,36 @@ form {
 }
 
 .user-icon i {
-  color: var(--prmary-color);
+  color: var(--secondary-color);
 }
 
 .user-icon h2 {
-  color: var(--prmary-color);
+  color: var(--secondary-color);
   font-size: 1.9rem;
+  font-weight: 600;
 }
 
 .buttons {
   width: 90%;
+  background-color: var(--bg-color);
+  border-radius: 16px;
+  padding: 1.7rem 0;
+  margin-bottom: 2rem;
 }
 
 .buttons form {
   width: 100%;
-  background-color: var(--main-color);
-  margin: 5px auto;
+  margin: 0 auto;
 }
 
 .buttons button {
   width: 100%;
   margin: 0 auto;
   background-color: var(--secondary-color);
-  padding: 0.5rem;
+  padding: 0.8rem;
   border: var(--bg-color);
   color: var(--on-secondary);
-  border-radius: 4px;
+  border-radius: 16px;
   font-weight: 700;
   font-size: 1.2rem;
 }
@@ -158,8 +173,7 @@ form {
 
 .nav-splash {
   width: 100%;
-  background-color: var(--main-color);
-  color: var(--prmary-color);
+  background-color: var(--primary-color);
   padding: 1rem 0.5rem;
   border-radius: 4px  4px 0 0;
 }
@@ -172,23 +186,27 @@ form {
   padding: 0.3rem 0.5rem;
   text-align: right;
   font-size: 1.2rem;
-  color: var(--prmary-color);
+  color: var(--secondary-color);
 }
 
 .nav-splash h2 {
-  color: inherit;
+  color: var(--secondary-color);
 }
 
 .actions {
   width: 100%;
-  margin: 1rem 0;
+  margin: 0.2rem 0 1rem;
 }
 
 .actions input {
+  width: 100%;
+  font-size: 1.1rem;
   font-weight: 700;
   border: var(--size-border);
-  border-radius: 4px;
-  padding: 0.2rem 1rem;
+  color: var(--on-secondary);
+  background-color: var(--secondary-color);
+  border-radius: 8px;
+  padding: 0.5rem;
 }
 
 .act a {
@@ -204,14 +222,14 @@ form {
   height: 70px;
   width: 100%;
   justify-content: space-around;
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
 }
 
 .header-categories h1:not(.transaction-header-nav) {
   width: 80%;
   text-align: center;
   font-size: 24px;
-  color: var(--on-secondary);
+  color: var(--secondary-color);
 }
 
 .header-categories h1.transaction-header-nav {
@@ -222,7 +240,7 @@ form {
 
 .transaction-header-nav {
   font-size: 24px;
-  color: var(--on-secondary);
+  color: var(--secondary-color);
 }
 
 .categories {
@@ -326,7 +344,7 @@ form {
   border: var(--shadow-color);
   border-radius: 4px;
   padding: 0.2rem 1rem;
-  color: var(--prmary-color);
+  color: var(--primary-color);
   background-color: var(--btn-color);
   transition: all 0.5s ease-in;
 }
@@ -334,7 +352,7 @@ form {
 .btn-changes form button,
 .btns-record form button {
   border: var(--size-border);
-  background-color: var(--main-color);
+  background-color: var(--primary-color);
 }
 
 .actions-save input {
@@ -342,7 +360,7 @@ form {
   padding: 3px 5px;
   font-size: 1.2rem;
   font-weight: 600;
-  color: var(--on-secondary);
+  color: var(--secondary-color);
   transition: all 0.5s ease-in;
 }
 
@@ -392,7 +410,7 @@ form {
 }
 
 .transactions p span {
-  color: var(--main-color);
+  color: var(--primary-color);
 }
 
 .input label {
@@ -402,8 +420,8 @@ form {
 .input input {
   width: 100%;
   height: 1.9rem;
-  padding: 0.7rem;
-  margin: 0.5rem auto 1.5rem;
+  padding: 1.4rem 0.5rem;
+  margin: 0.5rem auto 1rem;
   border-radius: 4px;
 }
 
@@ -434,14 +452,14 @@ form {
 
 .new-cat-btn button:hover,
 .new-cat-btn button:hover a {
-  color: var(--main-color);
-  border-color: var(--main-color);
+  color: var(--primary-color);
+  border-color: var(--primary-color);
   background-color: var(--btn-color);
 }
 
 input:hover:not(.input-file) {
   transform: scale(1.01);
-  border: 1px solid var(--main-color);
+  border: 1px solid var(--primary-color);
 }
 
 .actions-btn:hover,
