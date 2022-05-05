@@ -13,16 +13,16 @@
   - introduce new transactions associated with a category.
   - see the money spent on each category.
 
-### Screenshot
+### Screenshots 📸
 
 |       Home Page                 |          Category Page                |         Add Category Form                |
 :--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
-![](./app/assets/images/screenshot_1.png) |![](./app/assets/images/screenshot_2.png) |![](./app/assets/images/screenshot_3.png) |
+![](./app/assets/images/img1.png) |![](./app/assets/images/img3.png) |![](./app/assets/images/img4.png) |
 
 
 |         Category-Transaction    |        Add Transaction Form           |         Transaction Details                |
 :--------------------------------:|:-------------------------------------:|:-------------------------------------------:|
-![](./app/assets/images/screenshot_4.png) |![](./app/assets/images/screenshot_5.png) |![](./app/assets/images/screenshot_6.png) |
+![](./app/assets/images/img5.png) |![](./app/assets/images/img7.png) |![](./app/assets/images/img6.png) |
 
 
 
@@ -46,11 +46,11 @@
 - Limit access to webapp resources based on authorization rules.
 - Analyze in writing why you have made a coding choice using one structure over another.
 
-## Live Demo
+## Live Demo 🔗
 
 [Live Demo Link](https://budgy-budget-api.herokuapp.com)
 
-## Loom Video
+## Loom Video 🔗
 
 [Loom Video Link](https://www.loom.com/share/2d1971886acf41eab27ea244c1f1acdb)
 
@@ -219,7 +219,7 @@ $  bundle exec rspec ./spec/features/
 $  bundle exec rspec ./spec/models/
 ```
 
-## Built With
+## Built With 🛠️
 
 This project is build with:
 
