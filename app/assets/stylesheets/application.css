@@ -347,13 +347,14 @@ form.login-form {
   border: var(--shadow-color);
   border-radius: 4px;
   padding: 0.2rem 1rem;
-  color: var(--primary-color);
-  background-color: var(--btn-color);
+  color: var(--on-secondary);
+  background-color: var(--secondary-color);
   transition: all 0.5s ease-in;
 }
 
 .btn-changes form button,
 .btns-record form button {
+  color: var(--text-color);
   border: var(--size-border);
   background-color: var(--primary-color);
 }
@@ -388,15 +389,18 @@ form.login-form {
 
 .transactions ul {
   width: 100%;
-  margin: 0 auto 1rem;
+  margin: 1rem auto;
+  padding: 1rem 1.5rem;
+  border-radius: 16px;
+  background-color: var(--primary-color);
 }
 
 .transactions ul li {
   width: 100%;
-  margin-top: 1rem;
-  padding: 1rem;
+  margin: 1rem auto;
+  padding: 0.7rem 1rem;
   border-radius: 4px;
-  background-color: #3778c215;
+  background-color: #0366d64d;
 }
 
 .transactions li.show .record.show {
@@ -413,7 +417,7 @@ form.login-form {
 }
 
 .transactions p span {
-  color: var(--primary-color);
+  color: var(--text-color);
 }
 
 .input label {
@@ -445,7 +449,7 @@ form.login-form {
   border: var(--size-border);
   border-radius: 8px;
   color: var(--on-secondary);
-  background-color: var(--btn-color);
+  background-color: var(--secondary-color);
   transition: all 0.5s ease-in;
 }
 
