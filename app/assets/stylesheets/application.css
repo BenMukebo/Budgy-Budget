@@ -7,11 +7,8 @@
   --box-hover: 1px solid var(--primary-color)
   --bacground-color: #e5e5e5;
   --primary-color:#298cfc33;
-
-  /* --primary-color: #a05d1f; */
   --btn-color: #5fb523;
   --secondary-color: #02428b;
-  ;
   --text-color: #434b54;
   --bg-color: #0372ef42;;
   --on-secondary: #fff;
@@ -58,11 +55,9 @@ main {
   min-height: 100vh;
   height: 100%;
   margin: 0 auto;
-
-  /* padding: 1rem; */
   position: relative;
   background-color: var(--bacground-color);
-  border: 1px solid rgba(134, 134, 134, 0.507);
+  /* border: 1px solid rgba(134, 134, 134, 0.507); */
 }
 
 button,
@@ -129,6 +124,7 @@ form#save-categ-from {
 
 .user-icon i {
   color: var(--secondary-color);
+  /* color: rgba(4, 169, 169, 0.668); */
 }
 
 .user-icon h2 {
@@ -162,26 +158,11 @@ form#save-categ-from {
   font-size: 1.2rem;
 }
 
-/* LOG IN and SIGN UP */
-
-/* #new-tran-from,
-#save-categ-from {
-  height: 100%;
-  min-height: 100%;
-  background-color: red;
-  margin: 0;
-  padding: 0;
-} */
-
 .nav-splash {
   width: 100%;
   background-color: var(--primary-color);
   padding: 1rem 0.5rem;
   border-radius: 4px  4px 0 0;
-}
-
-.icons a {
-  /* width: 10%; */
 }
 
 .icons i {
@@ -248,6 +229,8 @@ form#save-categ-from {
 .categories {
   padding: 1rem 0;
   background: #0366d64d;
+  height: 400px;
+  overflow: scroll;
 
 }
 
@@ -256,9 +239,9 @@ form#save-categ-from {
   justify-content: space-between;
   position: relative;
   padding: 1rem;
-  margin-bottom: 1rem;
+  margin-bottom: 1.2rem;
   background-color: var(--on-secondary);
-  border-radius: 4px;
+  border-radius: 8px;
 }
 
 .category.transaction {
@@ -300,6 +283,7 @@ form#save-categ-from {
   height: 67%;
   align-items: flex-end;
   margin-top: 1rem;
+  color: var(--text-color);
 }
 
 .total-amount {
@@ -307,6 +291,7 @@ form#save-categ-from {
   font-weight: 600;
   font-size: 1.1rem;
   z-index: 1;
+  color: var(--text-color);
 }
 
 .new-cat-btn {
@@ -373,14 +358,11 @@ form#save-categ-from {
 .transactions {
   flex-direction: column;
   align-items: center;
-
-  /* background-color: var(--bacground-color); */
 }
 
 .transactions.show {
   max-width: 100%;
   height: calc(100vh - 72px);
-  background-color: var(--bg-color);
 }
 
 .transactions h2 {
