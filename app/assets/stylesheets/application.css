@@ -84,7 +84,9 @@ form {
   border-radius: 0 0 4px  4px;
 }
 
-form.login-form {
+form.login-form,
+form#new-tran-from,
+form#save-categ-from {
   position: absolute;
   top: 50%;
   left: 50%;
