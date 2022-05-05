@@ -4,13 +4,13 @@
 :root {
   --size-border: 2px solid var(--text-color);
   --box-border: 2px solid var(--shadow-color);
-  --box-hover: 1px solid var(--primary-color)
+  --box-hover: 1px solid var(--primary-color);
   --bacground-color: #e5e5e5;
-  --primary-color:#298cfc33;
+  --primary-color: #298cfc33;
   --btn-color: #5fb523;
   --secondary-color: #02428b;
   --text-color: #434b54;
-  --bg-color: #0372ef42;;
+  --bg-color: #0372ef42;
   --on-secondary: #fff;
   --shadow-color: #f1f1f2;
 }
@@ -57,6 +57,7 @@ main {
   margin: 0 auto;
   position: relative;
   background-color: var(--bacground-color);
+
   /* border: 1px solid rgba(134, 134, 134, 0.507); */
 }
 
@@ -92,7 +93,6 @@ form#save-categ-from {
   border-radius: 16px;
 }
 
-
 /* SPLASH PAGE */
 
 .splash-page {
@@ -103,7 +103,7 @@ form#save-categ-from {
   align-items: center;
   justify-content: space-around;
   background-color: var(--primary-color);
-  border-radius: 0px 100px 0px 0px;
+  border-radius: 0 100px 0 0;
 }
 
 .splash-page h1 {
@@ -113,6 +113,7 @@ form#save-categ-from {
   text-align: center;
   color: var(--secondary-color);
   background: #0372ef26;
+
   /* border: var(--box-border); */
   border-radius: 20px;
   font-weight: 900;
@@ -124,6 +125,7 @@ form#save-categ-from {
 
 .user-icon i {
   color: var(--secondary-color);
+
   /* color: rgba(4, 169, 169, 0.668); */
 }
 
@@ -231,7 +233,6 @@ form#save-categ-from {
   background: #0366d64d;
   height: 400px;
   overflow: scroll;
-
 }
 
 .category {
@@ -443,8 +444,9 @@ form#save-categ-from {
 
 .new-cat-btn button:hover {
   color: var(--text-color);
+
   /* border-color: var(--primary-color); */
-  background-color: var(--primary-color);  
+  background-color: var(--primary-color);
 }
 
 input:hover:not(.input-file) {
