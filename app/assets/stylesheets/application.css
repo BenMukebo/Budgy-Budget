@@ -245,6 +245,8 @@ form.login-form {
 
 .categories {
   padding: 1rem 0;
+  background: #0366d64d;
+
 }
 
 .category {
@@ -253,7 +255,8 @@ form.login-form {
   position: relative;
   padding: 1rem;
   margin-bottom: 1rem;
-  background-color: var(--bg-color);
+  background-color: var(--on-secondary);
+  border-radius: 4px;
 }
 
 .category.transaction {
@@ -308,7 +311,7 @@ form.login-form {
   width: 100%;
   margin-top: auto;
   padding: 1rem;
-  background-color: var(--btn-color);
+  background-color: var(--secondary-color);
   transition: all 0.5s ease-in;
 }
 
@@ -316,7 +319,7 @@ form.login-form {
   width: 100%;
   padding: 1rem;
   border: var(--box-border);
-  background-color: var(--btn-color);
+  background-color: var(--secondary-color);
 }
 
 .btn-changes {
@@ -450,11 +453,10 @@ form.login-form {
   transform: scale(0.97);
 }
 
-.new-cat-btn button:hover,
-.new-cat-btn button:hover a {
-  color: var(--primary-color);
-  border-color: var(--primary-color);
-  background-color: var(--btn-color);
+.new-cat-btn button:hover {
+  color: var(--text-color);
+  /* border-color: var(--primary-color); */
+  background-color: var(--primary-color);  
 }
 
 input:hover:not(.input-file) {
@@ -472,5 +474,5 @@ input:hover:not(.input-file) {
 .actions-save input:hover,
 .icons i:hover {
   transform: scale(1.07);
-  color: antiquewhite;
+  color: var(--on-secondary);
 }
